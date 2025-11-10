@@ -360,7 +360,7 @@ class APIClient:
                 dir_path = os.path.dirname(save_path)
                 if len(dir_path) > 0:
                     os.makedirs(dir_path, exist_ok=True)
-                self.fetch_and_save_file(path, save_to_fn=save_path)
+                self.fetch_and_save_file(entry, save_to_fn=save_path)
 
     def upload_file(self, local_fn: str, path: str):
         if not path.startswith('/'):
