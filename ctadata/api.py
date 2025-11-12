@@ -355,7 +355,7 @@ class APIClient:
                 path = path[:-1]
             root_dir_name = path.split('/')[-1]
             for entry in self.list_dir(path, recursive=True):
-                print('entry', entry)
+                logger.debug('Processing entry: %s', entry)
                 save_path = entry[len(path) - len(root_dir_name):].strip()
                 dir_path = os.path.dirname(save_path)
                 if len(dir_path) > 0:
